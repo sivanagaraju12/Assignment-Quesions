@@ -1,0 +1,184 @@
+// Program to calculate area and circumference of a circle.
+#include<stdio.h>
+  #define PI 3.14
+  int main()
+  {
+      float r,p,a;
+      printf("Enter radius is :");
+      scanf("%f",&r);
+      a=PI*r*r;
+      printf("\nArea of circle: %f",a);
+      p=2*PI*r;
+      printf("\nCircumference of circle: %f",p);
+      return 0;
+  }
+  
+  //Program to Explain all data types including signed and unsigned.
+  #include<stdio.h>
+  void main()
+  {
+      int a=-256;
+      unsigned int a1=256;
+      printf("\nSize of signed int(%d): %ld byte\n",a,sizeof(a));
+      printf("Size of unsigned int(%u): %ld byte\n",a1,sizeof(a1));
+      
+      short int b=-1234;
+      unsigned short int b1=1234;
+      printf("\nSize of signed short int(%d): %ld byte\n",b,sizeof(b));
+      printf("Size of unsigned short int(%u): %ld byte\n",b1,sizeof(b1));
+      
+      long int c=-567890;
+      unsigned long int c1=567890;
+      printf("\nSize of signed long int(%ld): %ld byte\n",c,sizeof(c));
+      printf("Size of unsigned long int(%lu): %ld byte\n",c1,sizeof(c1));
+      
+      long long int d=-987654;
+      unsigned long long int d1=987654;
+      printf("\nSize of signed long long int(%lld): %ld byte\n",d,sizeof(d));
+      printf("Size of unsigned long long int(%llu): %ld byte\n",d1,sizeof(d1));
+      
+      char s=-45;
+      unsigned char s1=45;
+      printf("\nSize of signed char (%c): %ld byte\n",s,sizeof(s));
+      printf("Size of unsigned char(%u): %ld byte\n",s1,sizeof(s1));
+      
+      float i=3.13131313;
+      double j=2.13121312;
+      long double k=3.1212122;
+      printf("\nSize of float(%f): %ld bytes\n",i,sizeof(i));
+      printf("Size of double(%lf): %ld bytes\n",j,sizeof(j));
+      printf("Size of long double(%Le): %ld bytes\n",k,sizeof(k)); 
+      }
+
+//Program to explain all opeartors using different data types.
+//arthametic operator
+
+
+#include <stdio.h>
+int main()
+{
+    int a = 20,b = 5, c;
+
+    
+    printf("a+b = %d \n",c=a+b);
+    c = a-b;
+    printf("a-b = %d \n",c);
+    c = a*b;
+    printf("a*b = %d \n",c);
+    c = a/b;
+    printf("a/b = %d \n",c);
+    c = a%b;
+    printf("Remainder when a divided by b = %d \n",c);
+
+    return 0;
+}
+
+
+// Working of assignment operators
+#include <stdio.h>
+int main()
+{
+    int a = 5, b;
+
+    b = a;      
+    printf("c = %d\n", b);
+    b += a;     
+    printf("c = %d\n", b);
+    b -= a;
+    printf("c = %d\n", b);
+    b *= a; 
+    printf("c = %d\n", b);
+    b /= a;     
+    printf("c = %d\n", b);
+    b %= a;     
+    printf("c = %d\n", b);
+
+    return 0;
+}
+
+
+// Working of logical operators
+
+#include <stdio.h>
+int main()
+{
+    int a = 20, b = 15, c = 10, result;
+
+    result = (a == b) && (c > b);
+    printf("(a == b) && (c > b) is %d \n", result);
+
+    result = (a == b) && (c < b);
+    printf("(a == b) && (c < b) is %d \n", result);
+
+    result = (a == b) || (c < b);
+    printf("(a == b) || (c < b) is %d \n", result);
+
+    result = (a != b) || (c < b);
+    printf("(a != b) || (c < b) is %d \n", result);
+    result = !(a != b);
+    printf("!(a != b) is %d \n", result);
+    result = !(a == b);
+    printf("!(a == b) is %d \n", result);
+}
+
+
+// Working of relational operators
+#include <stdio.h>
+int main()
+{
+    int a = 15, b = 20, c = 10;
+
+    printf("%d == %d is %d \n", a, b, a == b);
+    printf("%d == %d is %d \n", a, c, a == c);
+    printf("%d > %d is %d \n", a, b, a > b);
+    printf("%d > %d is %d \n", a, c, a > c);
+    printf("%d < %d is %d \n", a, b, a < b);
+    printf("%d < %d is %d \n", a, c, a < c);
+    printf("%d != %d is %d \n", a, b, a != b);
+    printf("%d != %d is %d \n", a, c, a != c);
+    printf("%d >= %d is %d \n", a, b, a >= b);
+    printf("%d >= %d is %d \n", a, c, a >= c);
+    printf("%d <= %d is %d \n", a, b, a <= b);
+    printf("%d <= %d is %d \n", a, c, a <= c);
+
+    return 0;
+}
+
+
+//increment and decrement operator
+#include <stdio.h>
+int main()
+{
+int a = 20, b = 10,    c = 25, d = 40;
+ printf("++a = %d \n", ++a);
+  printf("--b = %d \n", --b);
+  printf("c++= %d \n", c++);
+   printf("d-- = %d \n", d--);
+ return 0;
+}
+
+//Program to explain all storage classes scope.
+#include<stdio.h>
+void a();
+void b();
+int x=20;
+void main()
+{
+    a();
+    a();
+    b();
+    b();
+    printf("%d /n ",x);
+}
+void a()
+{
+    int x=5;
+    printf("%d\n",x);
+    x=x+1;
+}
+void b()
+{
+    static int y;
+    printf("%d\n",y);
+    y=y+1;
+}
